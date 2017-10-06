@@ -16,7 +16,7 @@ Template.hello.helpers({
 
 Template.hello.events({
   'click button': function(event) {
-    value = Template.instance().counter.get() + 1;
+    let value = Template.instance().counter.get() + 1;
     Template.instance().counter.set(value);
   },
 });
