@@ -3,7 +3,7 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
 
-Template.hello.onCreated(function helloOnCreated() {
+Template.hello.onCreated(function() {
   // counter starts at 0
   Template.instance().counter = new ReactiveVar(0);
 });
@@ -16,7 +16,6 @@ Template.hello.helpers({
 
 Template.hello.events({
   'click button': function(event) {
-    // increment the counter when button is clicked
     value = Template.instance().counter.get() + 1;
     Template.instance().counter.set(value);
   },
